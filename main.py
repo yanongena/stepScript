@@ -2,10 +2,16 @@ from OciPipeline import OciPipeline
 import os
 from random import randint
 import time
-
-directory = 'E:\\projects\\Oracle\\EllisonInstitute\\root\\DataSet1'
+import sys
 
 pipeline = OciPipeline()
+
+directory = sys.argv[1]
+
+if directory is None:
+    pipeline.error("No input parameters provided.")
+    pipeline.finished(pipeline.WITH_ERROR)
+    exit(-1)
 
 pipeline.start("Step 1")
 
