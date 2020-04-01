@@ -1,4 +1,4 @@
-from StepScript.OciPipeline import OciPipeline
+from OciPipeline import OciPipeline
 import os
 from random import randint
 import time
